@@ -21,6 +21,7 @@ Para ejecutar el proyecto es necesario realizar los siguientes pasos:
 Update-Database
 ```
 * Ahora podemos iniciar la aplicación, el usuario de acceso de prueba es admin / admin
+* La aplicación utiliza una librería de diseño llamada MaterialSkin, en caso que deseen interactuar con sus componentes, será necesario agregar a la barra de herramientas los elementos de la dll ubicada en "\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll"
 
 ### Autor
 * **Fabrizzio Chávez Tejada**
