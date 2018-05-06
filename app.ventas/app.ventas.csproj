@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E4FFE2C-560E-4150-AC81-C487F2F2D8A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>app.ventas</RootNamespace>
+    <AssemblyName>app.ventas</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Clientes\Formularios\frmListaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\Formularios\frmListaClientes.Designer.cs">
+      <DependentUpon>frmListaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\Formularios\frmMantenimientoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\Formularios\frmMantenimientoCliente.Designer.cs">
+      <DependentUpon>frmMantenimientoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\Logica\CtrlClientes.cs" />
+    <Compile Include="Clientes\Modelos\Cliente.cs" />
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensaje.cs" />
+    <Compile Include="Migrations\201805052204403_inicio.cs" />
+    <Compile Include="Migrations\201805052204403_inicio.Designer.cs">
+      <DependentUpon>201805052204403_inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Productos\Formularios\frmListaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\Formularios\frmListaProductos.Designer.cs">
+      <DependentUpon>frmListaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\Formularios\frmMantenimientoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\Formularios\frmMantenimientoProducto.Designer.cs">
+      <DependentUpon>frmMantenimientoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\Logica\CtrlProductos.cs" />
+    <Compile Include="Productos\Modelos\Producto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\Formularios\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\Formularios\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Logica\CtrlUsuarios.cs" />
+    <Compile Include="Seguridad\Models\Usuario.cs" />
+    <Compile Include="Seguridad\Sesion.cs" />
+    <Compile Include="Ventas\Formularios\frmBusquedaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Formularios\frmBusquedaCliente.Designer.cs">
+      <DependentUpon>frmBusquedaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Formularios\frmListaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Formularios\frmListaVentas.Designer.cs">
+      <DependentUpon>frmListaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Formularios\frmMantenimientoDetalleVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Formularios\frmMantenimientoDetalleVenta.Designer.cs">
+      <DependentUpon>frmMantenimientoDetalleVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Formularios\frmMantenimientoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\Formularios\frmMantenimientoVenta.Designer.cs">
+      <DependentUpon>frmMantenimientoVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\Logica\CtrlVentas.cs" />
+    <Compile Include="Ventas\Modelos\DetallesVenta.cs" />
+    <Compile Include="Ventas\Modelos\DTODetalleVenta.cs" />
+    <Compile Include="Ventas\Modelos\DTOVentaInfo.cs" />
+    <Compile Include="Ventas\Modelos\Venta.cs" />
+    <EmbeddedResource Include="Clientes\Formularios\frmListaClientes.resx">
+      <DependentUpon>frmListaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\Formularios\frmMantenimientoCliente.resx">
+      <DependentUpon>frmMantenimientoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805052204403_inicio.resx">
+      <DependentUpon>201805052204403_inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\Formularios\frmListaProductos.resx">
+      <DependentUpon>frmListaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\Formularios\frmMantenimientoProducto.resx">
+      <DependentUpon>frmMantenimientoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Seguridad\Formularios\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Formularios\frmBusquedaCliente.resx">
+      <DependentUpon>frmBusquedaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Formularios\frmListaVentas.resx">
+      <DependentUpon>frmListaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Formularios\frmMantenimientoDetalleVenta.resx">
+      <DependentUpon>frmMantenimientoDetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\Formularios\frmMantenimientoVenta.resx">
+      <DependentUpon>frmMantenimientoVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
