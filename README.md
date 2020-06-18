@@ -1,5 +1,5 @@
 # FrameworkPeruDemoVentas
-Aplicación de prueba de evaluación de conocimientos para el proceso de postulación Framework Perú Mayo 2018
+Aplicación de ejemplo programación en 3 capas con Winforms
 
 ## Iniciando el proyecto
 
